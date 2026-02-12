@@ -7,8 +7,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "node --experimental-vm-modules dist/example.js",
-    "example": "tsx src/example.ts"
+    "test": "npm run build && node dist/test.js",
+    "example": "npm run build && node dist/example-patterns.js",
+    "example:ner": "npm run build && node dist/example.js"
   },
   "keywords": [
     "pii",
