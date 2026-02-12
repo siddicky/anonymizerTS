@@ -14,7 +14,7 @@ import {
 let testsPassed = 0;
 let testsFailed = 0;
 
-function assertEqual(actual: any, expected: any, testName: string) {
+function assertEqual<T>(actual: T, expected: T, testName: string) {
   if (JSON.stringify(actual) === JSON.stringify(expected)) {
     console.log(`✓ ${testName}`);
     testsPassed++;
