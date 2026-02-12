@@ -107,16 +107,24 @@ export class HashOperator implements Operator {
  */
 export class EncryptOperator implements Operator {
   private key: string;
+  private static warningShown = false;
 
   constructor(key: string) {
     this.key = key;
+    
+    // Show warning about insecure encryption
+    if (!EncryptOperator.warningShown) {
+      console.warn('⚠️  WARNING: EncryptOperator uses simple XOR encryption which is NOT secure for production use.');
+      console.warn('⚠️  For production, use proper encryption libraries like crypto-js or node:crypto with AES.');
+      EncryptOperator.warningShown = true;
+    }
   }
 
   operate(text: string, start: number, end: number): string {
     const entityText = text.substring(start, end);
     
-    // Simple XOR encryption for demonstration
-    // In production, use proper encryption libraries
+    // Simple XOR encryption for demonstration only
+    // NOT SECURE - use proper encryption in production
     const buffer = Buffer.from(entityText);
     const encrypted = Buffer.from(
       buffer.map((byte, i) => byte ^ this.key.charCodeAt(i % this.key.length))

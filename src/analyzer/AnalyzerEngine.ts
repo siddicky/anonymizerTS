@@ -67,7 +67,8 @@ export class AnalyzerEngine {
         const results = await recognizer.analyze(text, entities);
         allResults.push(...results);
       } catch (error) {
-        console.error(`Error in recognizer:`, error);
+        const recognizerName = recognizer.constructor.name;
+        console.error(`Error in recognizer ${recognizerName}:`, error);
       }
     }
 

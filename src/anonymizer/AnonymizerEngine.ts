@@ -64,9 +64,6 @@ export class AnonymizerEngine {
       // Apply the operator
       anonymizedText = operator.operate(anonymizedText, result.start, result.end);
 
-      // Calculate new end position after anonymization
-      const newEnd = result.start + (anonymizedText.length - text.length + (result.end - result.start));
-
       items.unshift({
         operator: operatorConfig.type,
         entityType: result.entityType.toString(),
