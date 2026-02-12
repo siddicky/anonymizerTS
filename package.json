@@ -1,0 +1,37 @@
+{
+  "name": "@siddicky/anonymizerts",
+  "version": "1.0.0",
+  "description": "TypeScript implementation of Microsoft Presidio using transformers.js for PII detection and anonymization",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/test.js",
+    "example": "npm run build && node dist/example-patterns.js",
+    "example:ner": "npm run build && node dist/example.js"
+  },
+  "keywords": [
+    "pii",
+    "anonymization",
+    "presidio",
+    "data-protection",
+    "transformers",
+    "nlp",
+    "privacy"
+  ],
+  "author": "siddicky",
+  "license": "MIT",
+  "dependencies": {
+    "@huggingface/transformers": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siddicky/anonymizerTS"
+  }
+}
