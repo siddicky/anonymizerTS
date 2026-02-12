@@ -6,7 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "demo": "ts-node examples/demo.ts",
     "example": "ts-node examples/basic-usage.ts",
+    "test:quick": "ts-node examples/quick-test.ts",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build"
   },
