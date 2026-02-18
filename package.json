@@ -1,6 +1,6 @@
 {
   "name": "@siddicky/anonymizerts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript implementation of Microsoft Presidio using transformers.js for PII detection and anonymization",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
