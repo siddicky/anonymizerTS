@@ -199,3 +199,6 @@ MIT
 - Inspired by [Microsoft Presidio](https://github.com/microsoft/presidio)
 - Powered by [Transformers.js](https://huggingface.co/docs/transformers.js)
 - Built with ❤️ by [@siddicky](https://github.com/siddicky)
+
+
+Rework verification: rework-verify-79be07fe19920821898a
